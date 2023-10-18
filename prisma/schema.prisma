@@ -58,19 +58,19 @@ model VerificationToken {
 model Category {
   id       String    @id @default(uuid())
   name     String
-  Slug     String
+  slug     String
   imageUrl String
   products Product[]
 }
 
 model Product {
-  id              String   @id @default(uuid())
-  name            String
-  slug            String
-  imageUrls       String[]
-  description     String
-  basePrice       Decimal  @db.Decimal(8, 2)
-  discountPercent Int      @default(0)
+  id                 String   @id @default(uuid())
+  name               String
+  slug               String
+  imageUrls          String[]
+  description        String
+  basePrice          Decimal  @db.Decimal(8, 2)
+  discountPercentage Int      @default(0)
   // totalPrice 
 
   categoryId String
