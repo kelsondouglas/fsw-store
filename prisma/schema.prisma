@@ -59,7 +59,7 @@ model Category {
   id       String    @id @default(uuid())
   name     String
   Slug     String
-  imageUrl String[]
+  imageUrl String
   products Product[]
 }
 
@@ -67,7 +67,7 @@ model Product {
   id              String   @id @default(uuid())
   name            String
   slug            String
-  imageUrl        String[]
+  imageUrls       String[]
   description     String
   basePrice       Decimal  @db.Decimal(8, 2)
   discountPercent Int      @default(0)
